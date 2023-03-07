@@ -11,5 +11,5 @@ And if you name your network anything but `nginx-network` please modify docker c
 Separated to multiple directories as you can check below:
 | number | Level | description |
 | ------ | ----- | ----------- |
-| 1 | simple | Static serving, Simple forwarding |
-| 1 | intermediate | Cache(configuration, single/multiple endpoints, cache locking), |
+| 1 | simple | `Static serving`, `Reverse proxy` |
+| 1 | intermediate | `Cache` (configuration, single/multiple endpoints, cache locking) - `Vary header`, `Header-directives` |
