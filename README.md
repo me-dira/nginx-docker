@@ -12,3 +12,4 @@ Separated to multiple directories as you can check below:
 | number | Level | description |
 | ------ | ----- | ----------- |
 | 1 | simple | Static serving, Simple forwarding |
+| 1 | intermediate | Cache(configuration, single/multiple endpoints, cache locking), |

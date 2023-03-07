@@ -9,11 +9,14 @@ services:
       - 3000:80
 
     volumes:
-      - ./_local/html:/usr/share/nginx/html/
-      - ./_local/conf.d:/etc/nginx/conf.d
+      - ./local/html:/usr/share/nginx/html/
+      - ./local/conf.d:/etc/nginx/conf.d
   
     networks:
       - nginx-network
+
+    env_file:
+      - ../.env
 
 networks:
   nginx-network:
