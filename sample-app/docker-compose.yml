@@ -1,15 +1,22 @@
 version: '3'
-
 services:
-  api:
-    container_name: api
-    build: .
-      
+  sample-app:
+    container_name: sample-app
+    build:
+      context: .
+    command: "yarn start"
+    environment:
+      - AUTHENTICATION_STRATEGY=local
+      - SESSION_SECRET_DIR=./../session-secret
+      - SESSION_STORE=redis
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+
     expose:
-      - 80
+      - 3000
 
     volumes:
-      - ./:/app
+      - ./src/:/app
     
     networks:
       - nginx-network
@@ -17,4 +24,3 @@ services:
 networks:
   nginx-network:
     external: true
-  

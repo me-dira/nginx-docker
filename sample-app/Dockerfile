@@ -1,7 +1,12 @@
-FROM node:latest
+FROM node:10
+
+RUN mkdir /app
 WORKDIR /app
 
-COPY . .
-RUN yarn
+COPY src/package.json ./
+COPY src/yarn.lock ./
 
-CMD [ "node", "./src/main.js" ]
+RUN yarn install
+COPY . ./
+
+CMD ["yarn", "start"]

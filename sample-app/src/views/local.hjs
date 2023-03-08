@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{ title }}</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+<h1>{{ title }}</h1>
+<p>{{ username }}</p>
+<form action="/" method="post">
+  <label>username</label>
+  <input type="text" name="username" value="hogehoge">
+  <input type="hidden" name="password" value="password">
+  <input type="submit" value="Submit">
+</form>
+</body>
+</html>
