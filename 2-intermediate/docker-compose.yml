@@ -1,7 +1,7 @@
 version: '3'
 services:
   nginx:
-    container_name: nginx-intermediate
+    container_name: nginx
     
     build:
       context: .
